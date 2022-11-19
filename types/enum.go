@@ -1,9 +1,8 @@
 package types
 
 const (
-	None TypeBit = 0
-
-	Normal TypeBit = 1 << iota >> 1
+	None TypeBit = 1 << iota >> 1
+	Normal
 	Fighting
 	Flying
 	Poison

@@ -5,10 +5,10 @@ import { pokeapi, write } from "./helpers.ts";
 const enumsTmpl = handlebars.compile(`package types
 
 const (
-	None TypeBit = 0
+	None TypeBit = 1 << iota >> 1
 
 	{{#each types}}
-	{{this}}{{#if @first}} TypeBit = 1 << iota >> 1{{/if}}
+	{{this}}
 	{{/each}}
 )
 `);
