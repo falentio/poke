@@ -1,9 +1,15 @@
 package pokemon
 
+import (
+	"github.com/falentio/poke/types"
+)
+
 type Pokemon struct {
 	BaseStats Stat
 	IV        Stat
 	EV        Stat
+
+	Type types.TypeBit
 }
 
 type Stat struct {

@@ -14,7 +14,7 @@ const (
 )
 
 type Move struct {
-	Name string
+	Type types.TypeBit
 
 	Accuracy    uint8
 	DamageClass DamageClass
