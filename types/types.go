@@ -9,6 +9,7 @@ import (
 
 var (
 	ErrInvalidDealerType = errors.New("types: invalid dealer type")
+	ErrInvalidReceiverType = errors.New("types: invalid receiver type")
 	ErrZeroType          = errors.New("types: None received")
 )
 
@@ -31,6 +32,9 @@ func GetMultiplier(receiver, dealer TypeBit) (float64, error) {
 	}
 	if bits.OnesCount32(uint32(dealer)) != 1 {
 		return -1, ErrInvalidDealerType
+	}
+	if bits.OnesCount32(uint32(receiver)) > 2 {
+		return -1, ErrInvalidReceiverType
 	}
 
 	var multiplier float64 = 1

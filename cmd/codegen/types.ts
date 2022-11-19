@@ -12,7 +12,7 @@ const (
 )
 `);
 
-const typesTmpl = handlebars.compile(`package types
+const typesTmpl = handlebars.compile(`package types_data
 
 import (
 	"github.com/falentio/poke/types"

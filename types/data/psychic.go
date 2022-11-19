@@ -1,4 +1,4 @@
-package types
+package types_data
 
 import (
 	"github.com/falentio/poke/types"
