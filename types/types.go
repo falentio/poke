@@ -29,7 +29,7 @@ func GetMultiplier(receiver, dealer TypeBit) (float64, error) {
 	if receiver == None || dealer == None {
 		return -1, ErrZeroType
 	}
-	if bits.OnesCount16(uint16(dealer)) != 1 {
+	if bits.OnesCount32(uint32(dealer)) != 1 {
 		return -1, ErrInvalidDealerType
 	}
 
