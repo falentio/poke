@@ -52,8 +52,8 @@ func Register(t TypeData) {
 	})
 }
 
-func Get(tb TypeBit) TypeData {
-	td := TypeData{Bit: tb}
+func Get(tb TypeBit) *TypeData {
+	td := &TypeData{Bit: tb}
 	for _, t := range typesData {
 		if t.Bit&tb == 0 {
 			continue
@@ -67,7 +67,7 @@ func Get(tb TypeBit) TypeData {
 	return td
 }
 
-func GetFromString(typeNames ...string) TypeData {
+func GetFromString(typeNames ...string) *TypeData {
 	tb := None
 	for _, td := range typesData {
 		for _, name := range typeNames {
