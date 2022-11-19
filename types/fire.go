@@ -5,8 +5,7 @@ func init() {
 }
 
 var FireData TypeData = TypeData{
-	Name: "fire",
-	Bit:  Fire,
+	Bit: Fire,
 
 	DoubleDamageTaken: None | Ground | Rock | Water,
 	HalfDamageTaken:   None | Bug | Fairy | Fire | Grass | Ice | Steel,

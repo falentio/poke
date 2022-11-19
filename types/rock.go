@@ -5,8 +5,7 @@ func init() {
 }
 
 var RockData TypeData = TypeData{
-	Name: "rock",
-	Bit:  Rock,
+	Bit: Rock,
 
 	DoubleDamageTaken: None | Fighting | Grass | Ground | Steel | Water,
 	HalfDamageTaken:   None | Fire | Flying | Normal | Poison,

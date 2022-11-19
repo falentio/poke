@@ -5,8 +5,7 @@ func init() {
 }
 
 var GhostData TypeData = TypeData{
-	Name: "ghost",
-	Bit:  Ghost,
+	Bit: Ghost,
 
 	DoubleDamageTaken: None | Dark | Ghost,
 	HalfDamageTaken:   None | Bug | Poison,

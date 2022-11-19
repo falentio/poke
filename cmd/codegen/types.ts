@@ -20,8 +20,7 @@ func init() {
 }
 
 var {{type}}Data TypeData = TypeData{
-	Name: "{{name}}",
-	Bit:  {{type}},
+	Bit: {{type}},
 
 	DoubleDamageTaken: None{{#each doubleDamageTaken}} | {{this}}{{/each}},
 	HalfDamageTaken:   None{{#each halfDamageTaken}} | {{this}}{{/each}},
@@ -43,7 +42,6 @@ await Promise.all(
 			const res = await pokeapi(i.url)
 			const code = typesTmpl({
 				type: pascalCase(i.name),
-				name: i.name,
 				doubleDamageTaken: res.damage_relations.double_damage_from
 					.map(i => pascalCase(i.name))
 					.sort((a, b) => a.localeCompare(b)),

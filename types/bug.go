@@ -5,8 +5,7 @@ func init() {
 }
 
 var BugData TypeData = TypeData{
-	Name: "bug",
-	Bit:  Bug,
+	Bit: Bug,
 
 	DoubleDamageTaken: None | Fire | Flying | Rock,
 	HalfDamageTaken:   None | Fighting | Grass | Ground,

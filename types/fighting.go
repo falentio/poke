@@ -5,8 +5,7 @@ func init() {
 }
 
 var FightingData TypeData = TypeData{
-	Name: "fighting",
-	Bit:  Fighting,
+	Bit: Fighting,
 
 	DoubleDamageTaken: None | Fairy | Flying | Psychic,
 	HalfDamageTaken:   None | Bug | Dark | Rock,

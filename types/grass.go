@@ -5,8 +5,7 @@ func init() {
 }
 
 var GrassData TypeData = TypeData{
-	Name: "grass",
-	Bit:  Grass,
+	Bit: Grass,
 
 	DoubleDamageTaken: None | Bug | Fire | Flying | Ice | Poison,
 	HalfDamageTaken:   None | Electric | Grass | Ground | Water,

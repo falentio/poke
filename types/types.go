@@ -66,16 +66,3 @@ func Get(tb TypeBit) *TypeData {
 	td.HalfDamageTaken = td.HalfDamageTaken ^ (td.HalfDamageTaken & td.DoubleDamageTaken)
 	return td
 }
-
-func GetFromString(typeNames ...string) *TypeData {
-	tb := None
-	for _, td := range typesData {
-		for _, name := range typeNames {
-			if td.Name == name {
-				tb |= td.Bit
-			}
-		}
-	}
-
-	return Get(tb)
-}

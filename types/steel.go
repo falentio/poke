@@ -5,8 +5,7 @@ func init() {
 }
 
 var SteelData TypeData = TypeData{
-	Name: "steel",
-	Bit:  Steel,
+	Bit: Steel,
 
 	DoubleDamageTaken: None | Fighting | Fire | Ground,
 	HalfDamageTaken:   None | Bug | Dragon | Fairy | Flying | Grass | Ice | Normal | Psychic | Rock | Steel,

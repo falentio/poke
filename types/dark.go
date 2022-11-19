@@ -5,8 +5,7 @@ func init() {
 }
 
 var DarkData TypeData = TypeData{
-	Name: "dark",
-	Bit:  Dark,
+	Bit: Dark,
 
 	DoubleDamageTaken: None | Bug | Fairy | Fighting,
 	HalfDamageTaken:   None | Dark | Ghost,
