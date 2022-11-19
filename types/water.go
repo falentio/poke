@@ -7,7 +7,7 @@ func init() {
 var WaterData TypeData = TypeData{
 	Bit: Water,
 
-	DoubleDamageTaken: None | Electric | Grass,
-	HalfDamageTaken:   None | Fire | Ice | Steel | Water,
+	DoubleDamageTaken: Electric | Grass,
+	HalfDamageTaken:   Fire | Ice | Steel | Water,
 	ZeroDamageTaken:   None,
 }

@@ -7,7 +7,7 @@ func init() {
 var IceData TypeData = TypeData{
 	Bit: Ice,
 
-	DoubleDamageTaken: None | Fighting | Fire | Rock | Steel,
-	HalfDamageTaken:   None | Ice,
+	DoubleDamageTaken: Fighting | Fire | Rock | Steel,
+	HalfDamageTaken:   Ice,
 	ZeroDamageTaken:   None,
 }

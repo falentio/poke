@@ -7,7 +7,7 @@ func init() {
 var PsychicData TypeData = TypeData{
 	Bit: Psychic,
 
-	DoubleDamageTaken: None | Bug | Dark | Ghost,
-	HalfDamageTaken:   None | Fighting | Psychic,
+	DoubleDamageTaken: Bug | Dark | Ghost,
+	HalfDamageTaken:   Fighting | Psychic,
 	ZeroDamageTaken:   None,
 }

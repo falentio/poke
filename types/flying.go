@@ -7,7 +7,7 @@ func init() {
 var FlyingData TypeData = TypeData{
 	Bit: Flying,
 
-	DoubleDamageTaken: None | Electric | Ice | Rock,
-	HalfDamageTaken:   None | Bug | Fighting | Grass,
-	ZeroDamageTaken:   None | Ground,
+	DoubleDamageTaken: Electric | Ice | Rock,
+	HalfDamageTaken:   Bug | Fighting | Grass,
+	ZeroDamageTaken:   Ground,
 }

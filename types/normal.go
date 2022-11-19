@@ -7,7 +7,7 @@ func init() {
 var NormalData TypeData = TypeData{
 	Bit: Normal,
 
-	DoubleDamageTaken: None | Fighting,
+	DoubleDamageTaken: Fighting,
 	HalfDamageTaken:   None,
-	ZeroDamageTaken:   None | Ghost,
+	ZeroDamageTaken:   Ghost,
 }

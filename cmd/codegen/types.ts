@@ -52,6 +52,6 @@ await Promise.all(
 					.map(i => pascalCase(i.name))
 					.sort((a, b) => a.localeCompare(b)),
 			})
-			await write(`types/${i.name}.go`, code)
+			await write(`types/${i.name}.go`, code.replace(/None \| /g, ""))
 		})
 )
