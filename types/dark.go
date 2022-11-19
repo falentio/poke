@@ -5,18 +5,10 @@ func init() {
 }
 
 var DarkData TypeData = TypeData{
-	Type: Dark,
+	Name: "dark",
+	Bit:  Dark,
 
-	DoubleDamageTaken: []Type{
-		Fighting,
-		Bug,
-		Fairy,
-	},
-	HalfDamageTaken: []Type{
-		Ghost,
-		Dark,
-	},
-	ZeroDamageTaken: []Type{
-		Psychic,
-	},
+	DoubleDamageTaken: None | Bug | Fairy | Fighting,
+	HalfDamageTaken:   None | Dark | Ghost,
+	ZeroDamageTaken:   None | Psychic,
 }

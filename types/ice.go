@@ -5,16 +5,10 @@ func init() {
 }
 
 var IceData TypeData = TypeData{
-	Type: Ice,
+	Name: "ice",
+	Bit:  Ice,
 
-	DoubleDamageTaken: []Type{
-		Fighting,
-		Rock,
-		Steel,
-		Fire,
-	},
-	HalfDamageTaken: []Type{
-		Ice,
-	},
-	ZeroDamageTaken: []Type{},
+	DoubleDamageTaken: None | Fighting | Fire | Rock | Steel,
+	HalfDamageTaken:   None | Ice,
+	ZeroDamageTaken:   None,
 }

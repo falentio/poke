@@ -5,18 +5,10 @@ func init() {
 }
 
 var GhostData TypeData = TypeData{
-	Type: Ghost,
+	Name: "ghost",
+	Bit:  Ghost,
 
-	DoubleDamageTaken: []Type{
-		Ghost,
-		Dark,
-	},
-	HalfDamageTaken: []Type{
-		Poison,
-		Bug,
-	},
-	ZeroDamageTaken: []Type{
-		Normal,
-		Fighting,
-	},
+	DoubleDamageTaken: None | Dark | Ghost,
+	HalfDamageTaken:   None | Bug | Poison,
+	ZeroDamageTaken:   None | Fighting | Normal,
 }

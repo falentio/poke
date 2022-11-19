@@ -5,18 +5,10 @@ func init() {
 }
 
 var GroundData TypeData = TypeData{
-	Type: Ground,
+	Name: "ground",
+	Bit:  Ground,
 
-	DoubleDamageTaken: []Type{
-		Water,
-		Grass,
-		Ice,
-	},
-	HalfDamageTaken: []Type{
-		Poison,
-		Rock,
-	},
-	ZeroDamageTaken: []Type{
-		Electric,
-	},
+	DoubleDamageTaken: None | Grass | Ice | Water,
+	HalfDamageTaken:   None | Poison | Rock,
+	ZeroDamageTaken:   None | Electric,
 }

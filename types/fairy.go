@@ -5,18 +5,10 @@ func init() {
 }
 
 var FairyData TypeData = TypeData{
-	Type: Fairy,
+	Name: "fairy",
+	Bit:  Fairy,
 
-	DoubleDamageTaken: []Type{
-		Poison,
-		Steel,
-	},
-	HalfDamageTaken: []Type{
-		Fighting,
-		Bug,
-		Dark,
-	},
-	ZeroDamageTaken: []Type{
-		Dragon,
-	},
+	DoubleDamageTaken: None | Poison | Steel,
+	HalfDamageTaken:   None | Bug | Dark | Fighting,
+	ZeroDamageTaken:   None | Dragon,
 }

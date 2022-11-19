@@ -5,18 +5,10 @@ func init() {
 }
 
 var PoisonData TypeData = TypeData{
-	Type: Poison,
+	Name: "poison",
+	Bit:  Poison,
 
-	DoubleDamageTaken: []Type{
-		Ground,
-		Psychic,
-	},
-	HalfDamageTaken: []Type{
-		Fighting,
-		Poison,
-		Bug,
-		Grass,
-		Fairy,
-	},
-	ZeroDamageTaken: []Type{},
+	DoubleDamageTaken: None | Ground | Psychic,
+	HalfDamageTaken:   None | Bug | Fairy | Fighting | Grass | Poison,
+	ZeroDamageTaken:   None,
 }

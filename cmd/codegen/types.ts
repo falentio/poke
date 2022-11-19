@@ -5,9 +5,10 @@ import { pokeapi, write } from "./helpers.ts"
 const enumsTmpl = handlebars.compile(`package types
 
 const (
-	None Type = iota
+	None TypeBit = 0
+
 	{{#each types}}
-	{{this}}
+	{{this}}{{#if @first}} TypeBit = 1 << iota >> 1{{/if}}
 	{{/each}}
 )
 `)
@@ -19,43 +20,40 @@ func init() {
 }
 
 var {{type}}Data TypeData = TypeData{
-	Type: {{type}},
+	Name: "{{name}}",
+	Bit:  {{type}},
 
-	DoubleDamageTaken: []Type{
-		{{#each doubleDamageTaken}}
-		{{this}},
-		{{/each}}
-	},
-	HalfDamageTaken  : []Type{
-		{{#each halfDamageTaken}}
-		{{this}},
-		{{/each}}
-	},
-	ZeroDamageTaken  : []Type{
-		{{#each zeroDamageTaken}}
-		{{this}},
-		{{/each}}
-	},
+	DoubleDamageTaken: None{{#each doubleDamageTaken}} | {{this}}{{/each}},
+	HalfDamageTaken:   None{{#each halfDamageTaken}} | {{this}}{{/each}},
+	ZeroDamageTaken:   None{{#each zeroDamageTaken}} | {{this}}{{/each}},
 }
 `)
 
-const { results } = await pokeapi("/api/v2/type")
+let { results } = await pokeapi("/api/v2/type")
+results = results.filter(i => !["shadow", "unknown"].includes(i.name))
 
 const code = enumsTmpl({
 	types: results
 		.map(i => pascalCase(i.name))
-		.filter(i => !["Shadow", "Unknown"].includes(i)),
 })
 await write(`types/enum.go`, code)
 await Promise.all(
-	results.map(async i => {
-		const res = await pokeapi(i.url)
-		const code = typesTmpl({
-			type: pascalCase(i.name),
-			doubleDamageTaken: res.damage_relations.double_damage_from.map(i => pascalCase(i.name)),
-			halfDamageTaken: res.damage_relations.half_damage_from.map(i => pascalCase(i.name)),
-			zeroDamageTaken: res.damage_relations.no_damage_from.map(i => pascalCase(i.name)),
+	results
+		.map(async i => {
+			const res = await pokeapi(i.url)
+			const code = typesTmpl({
+				type: pascalCase(i.name),
+				name: i.name,
+				doubleDamageTaken: res.damage_relations.double_damage_from
+					.map(i => pascalCase(i.name))
+					.sort((a, b) => a.localeCompare(b)),
+				halfDamageTaken: res.damage_relations.half_damage_from
+					.map(i => pascalCase(i.name))
+					.sort((a, b) => a.localeCompare(b)),
+				zeroDamageTaken: res.damage_relations.no_damage_from
+					.map(i => pascalCase(i.name))
+					.sort((a, b) => a.localeCompare(b)),
+			})
+			await write(`types/${i.name}.go`, code)
 		})
-		await write(`types/${i.name}.go`, code)
-	})
 )

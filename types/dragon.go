@@ -5,18 +5,10 @@ func init() {
 }
 
 var DragonData TypeData = TypeData{
-	Type: Dragon,
+	Name: "dragon",
+	Bit:  Dragon,
 
-	DoubleDamageTaken: []Type{
-		Ice,
-		Dragon,
-		Fairy,
-	},
-	HalfDamageTaken: []Type{
-		Fire,
-		Water,
-		Grass,
-		Electric,
-	},
-	ZeroDamageTaken: []Type{},
+	DoubleDamageTaken: None | Dragon | Fairy | Ice,
+	HalfDamageTaken:   None | Electric | Fire | Grass | Water,
+	ZeroDamageTaken:   None,
 }

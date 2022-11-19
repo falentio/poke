@@ -5,13 +5,10 @@ func init() {
 }
 
 var NormalData TypeData = TypeData{
-	Type: Normal,
+	Name: "normal",
+	Bit:  Normal,
 
-	DoubleDamageTaken: []Type{
-		Fighting,
-	},
-	HalfDamageTaken: []Type{},
-	ZeroDamageTaken: []Type{
-		Ghost,
-	},
+	DoubleDamageTaken: None | Fighting,
+	HalfDamageTaken:   None,
+	ZeroDamageTaken:   None | Ghost,
 }

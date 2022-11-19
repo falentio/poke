@@ -5,15 +5,10 @@ func init() {
 }
 
 var ElectricData TypeData = TypeData{
-	Type: Electric,
+	Name: "electric",
+	Bit:  Electric,
 
-	DoubleDamageTaken: []Type{
-		Ground,
-	},
-	HalfDamageTaken: []Type{
-		Flying,
-		Steel,
-		Electric,
-	},
-	ZeroDamageTaken: []Type{},
+	DoubleDamageTaken: None | Ground,
+	HalfDamageTaken:   None | Electric | Flying | Steel,
+	ZeroDamageTaken:   None,
 }

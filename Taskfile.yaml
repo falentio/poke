@@ -1,12 +1,12 @@
-# https://taskfile.dev
+version: "3"
 
-version: '3'
-
-vars:
-  GREETING: Hello, World!
+dotenv:
+  - .env
 
 tasks:
-  default:
+  test:
+    method: none
+    sources:
+      - "**/*.go"
     cmds:
-      - echo "{{.GREETING}}"
-    silent: true
+      - go test -run {{default "''" .GO_TEST_FILTER}} {{.GO_TEST_FLAGS}} {{default "./..." .CLI_ARGS}}

@@ -5,16 +5,10 @@ func init() {
 }
 
 var PsychicData TypeData = TypeData{
-	Type: Psychic,
+	Name: "psychic",
+	Bit:  Psychic,
 
-	DoubleDamageTaken: []Type{
-		Bug,
-		Ghost,
-		Dark,
-	},
-	HalfDamageTaken: []Type{
-		Fighting,
-		Psychic,
-	},
-	ZeroDamageTaken: []Type{},
+	DoubleDamageTaken: None | Bug | Dark | Ghost,
+	HalfDamageTaken:   None | Fighting | Psychic,
+	ZeroDamageTaken:   None,
 }
