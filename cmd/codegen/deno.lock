@@ -1,0 +1,152 @@
+{
+  "version": "2",
+  "remote": {
+    "https://deno.land/std@0.109.0/_util/assert.ts": "2f868145a042a11d5ad0a3c748dcf580add8a0dbc0e876eaa0026303a5488f58",
+    "https://deno.land/std@0.109.0/_util/os.ts": "dfb186cc4e968c770ab6cc3288bd65f4871be03b93beecae57d657232ecffcac",
+    "https://deno.land/std@0.109.0/path/_constants.ts": "1247fee4a79b70c89f23499691ef169b41b6ccf01887a0abd131009c5581b853",
+    "https://deno.land/std@0.109.0/path/_interface.ts": "1fa73b02aaa24867e481a48492b44f2598cd9dfa513c7b34001437007d3642e4",
+    "https://deno.land/std@0.109.0/path/_util.ts": "2e06a3b9e79beaf62687196bd4b60a4c391d862cfa007a20fc3a39f778ba073b",
+    "https://deno.land/std@0.109.0/path/common.ts": "f41a38a0719a1e85aa11c6ba3bea5e37c15dd009d705bd8873f94c833568cbc4",
+    "https://deno.land/std@0.109.0/path/glob.ts": "46708a3249cb5dc4a116cae3055114d6339bd5f0c1f412db6a4e0cb44c828a7d",
+    "https://deno.land/std@0.109.0/path/mod.ts": "4465dc494f271b02569edbb4a18d727063b5dbd6ed84283ff906260970a15d12",
+    "https://deno.land/std@0.109.0/path/posix.ts": "34349174b9cd121625a2810837a82dd8b986bbaaad5ade690d1de75bbb4555b2",
+    "https://deno.land/std@0.109.0/path/separator.ts": "8fdcf289b1b76fd726a508f57d3370ca029ae6976fcde5044007f062e643ff1c",
+    "https://deno.land/std@0.109.0/path/win32.ts": "2edb2f71f10578ee1168de01a8cbd3c65483e45a46bc2fa3156a0c6bfbd2720d"
+  },
+  "npm": {
+    "specifiers": {
+      "change-case": "change-case@4.1.2",
+      "handlebars": "handlebars@4.7.7"
+    },
+    "packages": {
+      "camel-case@4.1.2": {
+        "integrity": "sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==",
+        "dependencies": {
+          "pascal-case": "pascal-case@3.1.2",
+          "tslib": "tslib@2.4.1"
+        }
+      },
+      "capital-case@1.0.4": {
+        "integrity": "sha512-ds37W8CytHgwnhGGTi88pcPyR15qoNkOpYwmMMfnWqqWgESapLqvDx6huFjQ5vqWSn2Z06173XNA7LtMOeUh1A==",
+        "dependencies": {
+          "no-case": "no-case@3.0.4",
+          "tslib": "tslib@2.4.1",
+          "upper-case-first": "upper-case-first@2.0.2"
+        }
+      },
+      "change-case@4.1.2": {
+        "integrity": "sha512-bSxY2ws9OtviILG1EiY5K7NNxkqg/JnRnFxLtKQ96JaviiIxi7djMrSd0ECT9AC+lttClmYwKw53BWpOMblo7A==",
+        "dependencies": {
+          "camel-case": "camel-case@4.1.2",
+          "capital-case": "capital-case@1.0.4",
+          "constant-case": "constant-case@3.0.4",
+          "dot-case": "dot-case@3.0.4",
+          "header-case": "header-case@2.0.4",
+          "no-case": "no-case@3.0.4",
+          "param-case": "param-case@3.0.4",
+          "pascal-case": "pascal-case@3.1.2",
+          "path-case": "path-case@3.0.4",
+          "sentence-case": "sentence-case@3.0.4",
+          "snake-case": "snake-case@3.0.4",
+          "tslib": "tslib@2.4.1"
+        }
+      },
+      "constant-case@3.0.4": {
+        "integrity": "sha512-I2hSBi7Vvs7BEuJDr5dDHfzb/Ruj3FyvFyh7KLilAjNQw3Be+xgqUBA2W6scVEcL0hL1dwPRtIqEPVUCKkSsyQ==",
+        "dependencies": {
+          "no-case": "no-case@3.0.4",
+          "tslib": "tslib@2.4.1",
+          "upper-case": "upper-case@2.0.2"
+        }
+      },
+      "dot-case@3.0.4": {
+        "integrity": "sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==",
+        "dependencies": { "no-case": "no-case@3.0.4", "tslib": "tslib@2.4.1" }
+      },
+      "handlebars@4.7.7": {
+        "integrity": "sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==",
+        "dependencies": {
+          "minimist": "minimist@1.2.7",
+          "neo-async": "neo-async@2.6.2",
+          "source-map": "source-map@0.6.1",
+          "uglify-js": "uglify-js@3.17.4",
+          "wordwrap": "wordwrap@1.0.0"
+        }
+      },
+      "header-case@2.0.4": {
+        "integrity": "sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==",
+        "dependencies": {
+          "capital-case": "capital-case@1.0.4",
+          "tslib": "tslib@2.4.1"
+        }
+      },
+      "lower-case@2.0.2": {
+        "integrity": "sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==",
+        "dependencies": { "tslib": "tslib@2.4.1" }
+      },
+      "minimist@1.2.7": {
+        "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+        "dependencies": {}
+      },
+      "neo-async@2.6.2": {
+        "integrity": "sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==",
+        "dependencies": {}
+      },
+      "no-case@3.0.4": {
+        "integrity": "sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==",
+        "dependencies": {
+          "lower-case": "lower-case@2.0.2",
+          "tslib": "tslib@2.4.1"
+        }
+      },
+      "param-case@3.0.4": {
+        "integrity": "sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==",
+        "dependencies": { "dot-case": "dot-case@3.0.4", "tslib": "tslib@2.4.1" }
+      },
+      "pascal-case@3.1.2": {
+        "integrity": "sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==",
+        "dependencies": { "no-case": "no-case@3.0.4", "tslib": "tslib@2.4.1" }
+      },
+      "path-case@3.0.4": {
+        "integrity": "sha512-qO4qCFjXqVTrcbPt/hQfhTQ+VhFsqNKOPtytgNKkKxSoEp3XPUQ8ObFuePylOIok5gjn69ry8XiULxCwot3Wfg==",
+        "dependencies": { "dot-case": "dot-case@3.0.4", "tslib": "tslib@2.4.1" }
+      },
+      "sentence-case@3.0.4": {
+        "integrity": "sha512-8LS0JInaQMCRoQ7YUytAo/xUu5W2XnQxV2HI/6uM6U7CITS1RqPElr30V6uIqyMKM9lJGRVFy5/4CuzcixNYSg==",
+        "dependencies": {
+          "no-case": "no-case@3.0.4",
+          "tslib": "tslib@2.4.1",
+          "upper-case-first": "upper-case-first@2.0.2"
+        }
+      },
+      "snake-case@3.0.4": {
+        "integrity": "sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==",
+        "dependencies": { "dot-case": "dot-case@3.0.4", "tslib": "tslib@2.4.1" }
+      },
+      "source-map@0.6.1": {
+        "integrity": "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==",
+        "dependencies": {}
+      },
+      "tslib@2.4.1": {
+        "integrity": "sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==",
+        "dependencies": {}
+      },
+      "uglify-js@3.17.4": {
+        "integrity": "sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==",
+        "dependencies": {}
+      },
+      "upper-case-first@2.0.2": {
+        "integrity": "sha512-514ppYHBaKwfJRK/pNC6c/OxfGa0obSnAl106u97Ed0I625Nin96KAjttZF6ZL3e1XLtphxnqrOi9iWgm+u+bg==",
+        "dependencies": { "tslib": "tslib@2.4.1" }
+      },
+      "upper-case@2.0.2": {
+        "integrity": "sha512-KgdgDGJt2TpuwBUIjgG6lzw2GWFRCW9Qkfkiv0DxqHHLYJHmtmdUIKcZd8rHgFSjopVTlw6ggzCm1b8MFQwikg==",
+        "dependencies": { "tslib": "tslib@2.4.1" }
+      },
+      "wordwrap@1.0.0": {
+        "integrity": "sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==",
+        "dependencies": {}
+      }
+    }
+  }
+}
