@@ -1,6 +1,7 @@
 package pokemon
 
 import (
+	"github.com/falentio/poke/move"
 	"github.com/falentio/poke/types"
 )
 
@@ -10,6 +11,8 @@ type Pokemon struct {
 	EV        Stat
 
 	Type types.TypeBit
+	Move move.Move
+	Ability any
 }
 
 type Stat struct {

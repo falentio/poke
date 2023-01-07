@@ -11,7 +11,7 @@ func init() {
 var IceData types.TypeData = types.TypeData{
 	Bit: types.Ice,
 
-	DoubleDamageTaken: types.Fighting | types.Fire | types.Rock | types.Steel,
-	HalfDamageTaken:   types.Ice,
-	ZeroDamageTaken:   types.None,
+	DoubleDamageTaken: types.TypeNone | types.TypeFighting | types.TypeFire | types.TypeRock | types.TypeSteel,
+	HalfDamageTaken:   types.TypeNone | types.TypeIce,
+	ZeroDamageTaken:   types.TypeNone,
 }

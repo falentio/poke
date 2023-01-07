@@ -8,9 +8,9 @@ import (
 )
 
 var (
-	ErrInvalidDealerType = errors.New("types: invalid dealer type")
+	ErrInvalidDealerType   = errors.New("types: invalid dealer type")
 	ErrInvalidReceiverType = errors.New("types: invalid receiver type")
-	ErrZeroType          = errors.New("types: None received")
+	ErrZeroType            = errors.New("types: None received")
 )
 
 type (
@@ -66,7 +66,18 @@ func Get(tb TypeBit) *TypeData {
 		td.HalfDamageTaken |= t.HalfDamageTaken
 		td.ZeroDamageTaken |= t.ZeroDamageTaken
 	}
-	td.DoubleDamageTaken = td.DoubleDamageTaken ^ (td.DoubleDamageTaken & td.HalfDamageTaken)
-	td.HalfDamageTaken = td.HalfDamageTaken ^ (td.HalfDamageTaken & td.DoubleDamageTaken)
+	td.DoubleDamageTaken = (td.DoubleDamageTaken|td.ZeroDamageTaken)^td.ZeroDamageTaken
+	td.HalfDamageTaken = (td.HalfDamageTaken|td.ZeroDamageTaken)^td.ZeroDamageTaken
+	s := td.DoubleDamageTaken&td.HalfDamageTaken
+	td.DoubleDamageTaken = (td.DoubleDamageTaken|s)^s
+	td.HalfDamageTaken = (td.HalfDamageTaken|s)^s
 	return td
+}
+
+func (tb TypeBit) GetData() *TypeData {
+	return Get(tb)
+}
+
+func (tb TypeBit) Single() bool {
+	return bits.OnesCount(uint(tb)) == 0
 }

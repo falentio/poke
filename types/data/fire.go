@@ -11,7 +11,7 @@ func init() {
 var FireData types.TypeData = types.TypeData{
 	Bit: types.Fire,
 
-	DoubleDamageTaken: types.Ground | types.Rock | types.Water,
-	HalfDamageTaken:   types.Bug | types.Fairy | types.Fire | types.Grass | types.Ice | types.Steel,
-	ZeroDamageTaken:   types.None,
+	DoubleDamageTaken: types.TypeNone | types.TypeGround | types.TypeRock | types.TypeWater,
+	HalfDamageTaken:   types.TypeNone | types.TypeBug | types.TypeFairy | types.TypeFire | types.TypeGrass | types.TypeIce | types.TypeSteel,
+	ZeroDamageTaken:   types.TypeNone,
 }

@@ -11,7 +11,7 @@ func init() {
 var NormalData types.TypeData = types.TypeData{
 	Bit: types.Normal,
 
-	DoubleDamageTaken: types.Fighting,
-	HalfDamageTaken:   types.None,
-	ZeroDamageTaken:   types.Ghost,
+	DoubleDamageTaken: types.TypeNone | types.TypeFighting,
+	HalfDamageTaken:   types.TypeNone,
+	ZeroDamageTaken:   types.TypeNone | types.TypeGhost,
 }

@@ -11,7 +11,7 @@ func init() {
 var FlyingData types.TypeData = types.TypeData{
 	Bit: types.Flying,
 
-	DoubleDamageTaken: types.Electric | types.Ice | types.Rock,
-	HalfDamageTaken:   types.Bug | types.Fighting | types.Grass,
-	ZeroDamageTaken:   types.Ground,
+	DoubleDamageTaken: types.TypeNone | types.TypeElectric | types.TypeIce | types.TypeRock,
+	HalfDamageTaken:   types.TypeNone | types.TypeBug | types.TypeFighting | types.TypeGrass,
+	ZeroDamageTaken:   types.TypeNone | types.TypeGround,
 }

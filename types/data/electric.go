@@ -11,7 +11,7 @@ func init() {
 var ElectricData types.TypeData = types.TypeData{
 	Bit: types.Electric,
 
-	DoubleDamageTaken: types.Ground,
-	HalfDamageTaken:   types.Electric | types.Flying | types.Steel,
-	ZeroDamageTaken:   types.None,
+	DoubleDamageTaken: types.TypeNone | types.TypeGround,
+	HalfDamageTaken:   types.TypeNone | types.TypeElectric | types.TypeFlying | types.TypeSteel,
+	ZeroDamageTaken:   types.TypeNone,
 }

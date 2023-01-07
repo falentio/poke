@@ -5,9 +5,9 @@ import { pokeapi, write } from "./helpers.ts";
 const enumsTmpl = handlebars.compile(`package types
 
 const (
-	None TypeBit = 1 << iota >> 1
+	TypeNone TypeBit = 1 << iota >> 1
 	{{#each types}}
-	{{this}}
+	Type{{this}}
 	{{/each}}
 )
 `);
@@ -25,9 +25,9 @@ func init() {
 var {{type}}Data types.TypeData = types.TypeData{
 	Bit: types.{{type}},
 
-	DoubleDamageTaken: types.None{{#each doubleDamageTaken}} | types.{{this}}{{/each}},
-	HalfDamageTaken:   types.None{{#each halfDamageTaken}} | types.{{this}}{{/each}},
-	ZeroDamageTaken:   types.None{{#each zeroDamageTaken}} | types.{{this}}{{/each}},
+	DoubleDamageTaken: types.TypeNone{{#each doubleDamageTaken}} | types.Type{{this}}{{/each}},
+	HalfDamageTaken:   types.TypeNone{{#each halfDamageTaken}} | types.Type{{this}}{{/each}},
+	ZeroDamageTaken:   types.TypeNone{{#each zeroDamageTaken}} | types.Type{{this}}{{/each}},
 }
 `);
 

@@ -1,23 +1,23 @@
 package types
 
 const (
-	None TypeBit = 1 << iota >> 1
-	Normal
-	Fighting
-	Flying
-	Poison
-	Ground
-	Rock
-	Bug
-	Ghost
-	Steel
-	Fire
-	Water
-	Grass
-	Electric
-	Psychic
-	Ice
-	Dragon
-	Dark
-	Fairy
+	TypeNone TypeBit = 1 << iota >> 1
+	TypeNormal
+	TypeFighting
+	TypeFlying
+	TypePoison
+	TypeGround
+	TypeRock
+	TypeBug
+	TypeGhost
+	TypeSteel
+	TypeFire
+	TypeWater
+	TypeGrass
+	TypeElectric
+	TypePsychic
+	TypeIce
+	TypeDragon
+	TypeDark
+	TypeFairy
 )

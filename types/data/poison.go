@@ -11,7 +11,7 @@ func init() {
 var PoisonData types.TypeData = types.TypeData{
 	Bit: types.Poison,
 
-	DoubleDamageTaken: types.Ground | types.Psychic,
-	HalfDamageTaken:   types.Bug | types.Fairy | types.Fighting | types.Grass | types.Poison,
-	ZeroDamageTaken:   types.None,
+	DoubleDamageTaken: types.TypeNone | types.TypeGround | types.TypePsychic,
+	HalfDamageTaken:   types.TypeNone | types.TypeBug | types.TypeFairy | types.TypeFighting | types.TypeGrass | types.TypePoison,
+	ZeroDamageTaken:   types.TypeNone,
 }

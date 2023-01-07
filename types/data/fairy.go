@@ -11,7 +11,7 @@ func init() {
 var FairyData types.TypeData = types.TypeData{
 	Bit: types.Fairy,
 
-	DoubleDamageTaken: types.Poison | types.Steel,
-	HalfDamageTaken:   types.Bug | types.Dark | types.Fighting,
-	ZeroDamageTaken:   types.Dragon,
+	DoubleDamageTaken: types.TypeNone | types.TypePoison | types.TypeSteel,
+	HalfDamageTaken:   types.TypeNone | types.TypeBug | types.TypeDark | types.TypeFighting,
+	ZeroDamageTaken:   types.TypeNone | types.TypeDragon,
 }

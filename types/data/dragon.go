@@ -11,7 +11,7 @@ func init() {
 var DragonData types.TypeData = types.TypeData{
 	Bit: types.Dragon,
 
-	DoubleDamageTaken: types.Dragon | types.Fairy | types.Ice,
-	HalfDamageTaken:   types.Electric | types.Fire | types.Grass | types.Water,
-	ZeroDamageTaken:   types.None,
+	DoubleDamageTaken: types.TypeNone | types.TypeDragon | types.TypeFairy | types.TypeIce,
+	HalfDamageTaken:   types.TypeNone | types.TypeElectric | types.TypeFire | types.TypeGrass | types.TypeWater,
+	ZeroDamageTaken:   types.TypeNone,
 }

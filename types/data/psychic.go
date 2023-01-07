@@ -11,7 +11,7 @@ func init() {
 var PsychicData types.TypeData = types.TypeData{
 	Bit: types.Psychic,
 
-	DoubleDamageTaken: types.Bug | types.Dark | types.Ghost,
-	HalfDamageTaken:   types.Fighting | types.Psychic,
-	ZeroDamageTaken:   types.None,
+	DoubleDamageTaken: types.TypeNone | types.TypeBug | types.TypeDark | types.TypeGhost,
+	HalfDamageTaken:   types.TypeNone | types.TypeFighting | types.TypePsychic,
+	ZeroDamageTaken:   types.TypeNone,
 }

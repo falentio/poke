@@ -1,25 +1,42 @@
 package field
 
-type Weather uint8
+import "github.com/falentio/poke/pokemon"
 
+type Weather uint8
 const (
-	ClearSkies Weather = iota
-	HarshSunlight
-	ExtremelyHarshSunlight
-	Rain
-	HeavyRain
-	Sandstorm
-	Hail
-	ShadowyAura
-	Fog
-	StrongWinds
+	WeatherClearSkies Weather = iota
+	WeatherHarshSunlight
+	WeatherExtremelyHarshSunlight
+	WeatherRain
+	WeatherHeavyRain
+	WeatherSandstorm
+	WeatherHail
+	WeatherShadowyAura
+	WeatherFog
+	WeatherStrongWinds
 )
 
 type Terrain uint8
-
 const (
-	ElectricTerrain Terrain = iota
-	GrassyTerrain
-	MistyTerrin
-	PyshicTerrain
+	TerrainElectric Terrain = iota
+	TerrainGrassy
+	TerrainMisty
+	TerrainPyshic
 )
+
+type Player struct{
+	Pokemon []*pokemon.Pokemon
+	Item []any
+}
+
+type Sides struct{
+	Red []*Player
+	Blue []*Player
+}
+
+type Field struct{
+	Sides *Sides
+
+	Weather Weather
+	Terrain Terrain
+}
